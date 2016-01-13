@@ -98,7 +98,7 @@ class Scanner(Plugin):
     }
 
     source_media = {
-        'Blu-ray': ['bluray', 'blu-ray', 'brrip', 'br-rip'],
+        'BluRay': ['bluray', 'blu-ray', 'brrip', 'br-rip'],
         'HD DVD': ['hddvd', 'hd-dvd'],
         'DVD': ['dvd'],
         'HDTV': ['hdtv']
@@ -519,7 +519,7 @@ class Scanner(Plugin):
             p = enzyme.parse(filename)
 
             # Video codec
-            vc = ('H264' if p.video[0].codec == 'AVC1' else p.video[0].codec)
+            vc = ('x264' if p.video[0].codec == 'AVC1' else p.video[0].codec)
 
             # Audio codec
             ac = p.audio[0].codec
