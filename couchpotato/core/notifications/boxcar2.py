@@ -27,6 +27,7 @@ class Boxcar2(Notification):
                 'user_credentials': self.conf('token'),
                 'notification[title]': toUnicode('%s - %s' % (self.default_title, message)),
                 'notification[long_message]': toUnicode(long_message),
+                'notification[sound]': "notifier-2"
             }
 
             self.urlopen(self.url, data = data)
